@@ -28,7 +28,6 @@ export function registerGetDependencies(server: McpServer, db: CodeweaveDb): voi
         };
       }
 
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const manifests = JSON.parse(raw) as Array<{
         file: string;
         packageManager: string;

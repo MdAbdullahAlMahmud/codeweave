@@ -117,7 +117,7 @@ function parseGoMod(filePath: string, repoRoot: string): ParsedManifest | null {
     const deps: Dependency[] = [];
 
     for (const line of raw.split('\n')) {
-      const m = line.trim().match(/^([\w./\-]+)\s+(v[\w.\-+]+)/);
+      const m = line.trim().match(/^([\w./-]+)\s+(v[\w.+-]+)/);
       if (m) {
         deps.push({ name: m[1], version: m[2], dev: false });
       }
@@ -138,7 +138,7 @@ function parseRequirementsTxt(filePath: string, repoRoot: string): ParsedManifes
     for (const line of raw.split('\n')) {
       const trimmed = line.trim();
       if (!trimmed || trimmed.startsWith('#') || trimmed.startsWith('-')) continue;
-      const m = trimmed.match(/^([\w.\-\[\]]+)([><=!~,\s].+)?$/);
+      const m = trimmed.match(/^([\w.\-[\]]+)([><=!~,\s].+)?$/);
       if (m) {
         deps.push({ name: m[1], version: (m[2] ?? '').trim(), dev: false });
       }
@@ -170,7 +170,7 @@ function parsePyprojectToml(filePath: string, repoRoot: string): ParsedManifest 
         inDeps = false; inDevDeps = false; continue;
       }
       if (inDeps || inDevDeps) {
-        const m = trimmed.match(/^([\w.\-]+)\s*=\s*"([^"]+)"/);
+        const m = trimmed.match(/^([\w.-]+)\s*=\s*"([^"]+)"/);
         if (m && m[1] !== 'python') {
           deps.push({ name: m[1], version: m[2], dev: inDevDeps });
         }
@@ -234,7 +234,7 @@ function parseBuildGradle(filePath: string, repoRoot: string): ParsedManifest | 
 
     for (const line of raw.split('\n')) {
       // implementation 'group:artifact:version' or implementation("group:artifact:version")
-      const m = line.match(/(?:implementation|api|testImplementation|compileOnly|runtimeOnly)\s*[\('"]([^'"]+):([^'"]+):([^'"]+)['"]/);
+      const m = line.match(/(?:implementation|api|testImplementation|compileOnly|runtimeOnly)\s*[('"]([^'"]+):([^'"]+):([^'"]+)['"]/);
       if (m) {
         deps.push({ name: `${m[1]}:${m[2]}`, version: m[3], dev: line.includes('test') });
       }

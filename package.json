@@ -34,8 +34,8 @@
     "bin/",
     "dist/"
   ],
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/cli/index.js",
+  "types": "./dist/cli/index.d.ts",
   "scripts": {
     "dev": "tsx watch src/cli/index.ts",
     "build": "tsup",

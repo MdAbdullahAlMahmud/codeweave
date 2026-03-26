@@ -6,7 +6,6 @@ import { runInit } from './init.js';
 import { runStatus } from './status.js';
 
 const require = createRequire(import.meta.url);
-// eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
 const { version } = require('../../package.json') as { version: string };
 
 export function buildCli(): Command {
