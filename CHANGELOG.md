@@ -55,4 +55,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - npm publish workflow with provenance
 - Contributing guide, issue templates, PR template
 
-[0.1.0]: https://github.com/abdullahbs23/codeweave/releases/tag/v0.1.0
+[0.1.0]: https://github.com/MdAbdullahAlMahmud/codeweave/releases/tag/v0.1.0

@@ -4,13 +4,13 @@
   "description": "Make any repo instantly AI-ready via MCP — a self-hosted, zero-API-key MCP server for any codebase",
   "license": "MIT",
   "author": "Abdullah",
-  "homepage": "https://github.com/abdullahbs23/codeweave#readme",
+  "homepage": "https://github.com/MdAbdullahAlMahmud/codeweave#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abdullahbs23/codeweave.git"
+    "url": "git+https://github.com/MdAbdullahAlMahmud/codeweave.git"
   },
   "bugs": {
-    "url": "https://github.com/abdullahbs23/codeweave/issues"
+    "url": "https://github.com/MdAbdullahAlMahmud/codeweave/issues"
   },
   "keywords": [
     "mcp",

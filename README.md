@@ -1,7 +1,7 @@
 # codeweave
 
 [![npm version](https://img.shields.io/npm/v/codeweave.svg)](https://www.npmjs.com/package/codeweave)
-[![CI](https://github.com/abdullahbs23/codeweave/actions/workflows/ci.yml/badge.svg)](https://github.com/abdullahbs23/codeweave/actions/workflows/ci.yml)
+[![CI](https://github.com/MdAbdullahAlMahmud/codeweave/actions/workflows/ci.yml/badge.svg)](https://github.com/MdAbdullahAlMahmud/codeweave/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![npm downloads](https://img.shields.io/npm/dm/codeweave.svg)](https://www.npmjs.com/package/codeweave)
 
@@ -250,7 +250,7 @@ codeweave detects and parses:
 Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to fork, develop, test, and submit PRs.
 
 ```bash
-git clone https://github.com/abdullahbs23/codeweave.git
+git clone https://github.com/MdAbdullahAlMahmud/codeweave.git
 cd codeweave
 npm install
 npm test         # run tests
