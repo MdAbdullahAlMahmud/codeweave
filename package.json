@@ -1,0 +1,86 @@
+{
+  "name": "codeweave",
+  "version": "0.1.0",
+  "description": "Make any repo instantly AI-ready via MCP — a self-hosted, zero-API-key MCP server for any codebase",
+  "license": "MIT",
+  "author": "Abdullah",
+  "homepage": "https://github.com/abdullahbs23/codeweave#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdullahbs23/codeweave.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abdullahbs23/codeweave/issues"
+  },
+  "keywords": [
+    "mcp",
+    "ai",
+    "coding-tools",
+    "cli",
+    "context-protocol",
+    "llm",
+    "developer-tools",
+    "sqlite",
+    "codebase"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "bin": {
+    "codeweave": "./bin/codeweave.js"
+  },
+  "files": [
+    "bin/",
+    "dist/"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "tsx watch src/cli/index.ts",
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "better-sqlite3": "^12.8.0",
+    "chokidar": "^3.6.0",
+    "commander": "^12.0.0",
+    "fast-glob": "^3.3.0",
+    "ignore": "^5.0.0",
+    "js-yaml": "^4.0.0",
+    "simple-git": "^3.0.0",
+    "zod": "^3.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/js-yaml": "^4.0.0",
+    "@types/node": "^20.0.0",
+    "@vitest/coverage-v8": "^2.0.0",
+    "eslint": "^9.0.0",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0",
+    "prettier": "^3.0.0",
+    "tsup": "^8.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "typescript-eslint": "^8.0.0",
+    "vitest": "^2.0.0"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{js,json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  }
+}
