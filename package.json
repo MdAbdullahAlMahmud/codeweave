@@ -28,7 +28,7 @@
     "node": ">=18.0.0"
   },
   "bin": {
-    "codeweave": "./bin/codeweave.js"
+    "codeweave": "bin/codeweave.js"
   },
   "files": [
     "bin/",
