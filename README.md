@@ -7,6 +7,10 @@
 
 **Make any repo instantly AI-ready via MCP — a self-hosted, zero-API-key context server for your codebase.**
 
+<div align="center">
+  <img src="assets/demo.gif" alt="codeweave demo" width="800" />
+</div>
+
 codeweave runs locally alongside your AI coding tool. It indexes your entire repo into a fast SQLite database and exposes it as an [MCP](https://modelcontextprotocol.io) server, giving AI assistants deep, accurate context about your code — file tree, full-text search, git history, dependencies, stack detection, and coding conventions — without ever sending your code to a third party.
 
 ---
